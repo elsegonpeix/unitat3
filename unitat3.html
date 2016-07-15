@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$']],
+    processEscapes: true
+  }
+});
+</script>
+<style>
+body {
+  margin-top: 100px;
+  margin-right: 200px;
+  margin-bottom: 100px;
+  margin-left: 200px;
+}
+p {
+  border: 1px solid grey;
+  padding: 10px;
+  text-align: justify;
+}
+p.obs {
+  color: blue;
+}
+p.sol {
+  color: green;
+}
+</style>
+</head>
+
+<body>
+
+<h1>UNITAT 3. EQUACIONS I SISTEMES DE SEGON GRAU.</h1>
+
+<h3>3.1. Equacions de segon grau. Resolució.</h3>
+
+<p>L'equació
+\[
+ax^2+bx+c = 0,
+\]
+amb $a,b,c$ reals i $a \neq 0$, té dues, una o cap solució real. Es tracta d'una
+equació de segon grau.
+</p>
+
+<p class="obs"><i>Observació 1. Solucions de l'equació de segon grau.</i>
+Es pot comprovar que l'expressió
+\[
+x = \frac{- b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+dóna les dues solucions de l'equació de segon grau $ax^2+bx+c = 0$. Fixa't amb la
+<a href='https://mathsisfun.com/algebra/quadratic-equation-derivation.html'
+target='_blank'>
+demostració</a>.
+</p>
+
+<p><b>Exercici 1.</b> Troba les expressions de les solucions de l'equació de segon
+grau pels casos particulars $b=0$ i $c=0$.</p>
+<p class="sol" id="e1" style="display: none">
+Si $b=0$, aleshores les solucions de l'equació venen donades per $x = 
+\pm \sqrt{-\frac{c}{a}}$.
+<br>
+Si $c=0$, aleshores les solucions de l'equació són $x=0$ i $x=-\frac{b}{a}$.
+</p>
+<button onclick="xou('e1')">Solució.</button>
+
+<p class="obs"><i>Observació 2. L'equació de segon grau com una paràbola.</i>
+Per diferents valors de $a,b,c$ reals, el nombre i el lloc de les solucions de
+l'equació de segon grau $ax^2+bx+c=0$ varia. Ho pots observar fent servir
+l'aplicació <a href='https://geogebra.org/algebra' target='_blank'>geogebra</a>:
+escriu "y = axx + bx + c" a l'input, prem enter i crea els sliders per "a", "b",
+"c". Apareix al pla una paràbola; els punts on aquesta talla amb l'eix d'abscisses
+($y = 0$) és on es troben les solucions de l'equació de segon grau. Mou els
+sliders i fixa't amb el que passa.
+</p>
+
+<p><b>Exercici 2.</b>
+Demostra que si l'equació $ax^2+bx+c=0$ té com a solucions $x_1$, $x_2$, aleshores
+la suma d'aquestes és $-\frac{b}{a}$ i el seu producte és $\frac{c}{a}$, és a dir,
+\begin{align*}
+s &\equiv x_1 + x_2 = -\frac{b}{a},\\
+p &\equiv x_1x_2 = \frac{c}{a}.
+\end{align*}
+</p>
+<p class="sol" id="e2" style="display: none">
+Convé treballar amb expressions del tipus
+\[
+x_1 = \frac{- b - \sqrt{b^2 - 4ac}}{2a},
+\qquad
+x_2 = \frac{- b + \sqrt{b^2 - 4ac}}{2a}.
+\]
+A partir d'aquí, trivial.
+</p>
+<button onclick="xou('e2')">Solució.</button>
+
+<p class="obs"><i>Observació 3. Una altra manera d'escriure l'equació de segon
+grau.</i>
+Amb $s$, $p$ definits com a l'exercici anterior, és evident que l'equació
+$ax^2+bx+c=0$ equival a $x^2-sx+p=0$ (sols cal dividir per $a$ els dos membres de
+l'equació i això és pot fer ja que $a\neq0$).
+<br>
+Si hem de trobar dos nombres que sumats són $s$ i multiplicats són $p$, les
+solucions de l'equació $x^2-sx+p=0$ ens els donen.
+</p>
+
+<p>
+Considerem l'equació $x^2+5x-14=0$. Tenim
+\begin{align*}
+x_1 + x_2 = -5,\\
+x_1x_2 = -14.
+\end{align*}
+No cal trencar-s'hi molt el cap (bé, potser una mica...) per veure que prenent
+$x_1=-7$, $x_2=2$ es compleixen les dues condicions.
+</p>
+
+<p><b>Exercici 3.</b>
+Trobar de manera directa les solucions de les equacions següents.
+\[
+(a)\quad x^2-6x+5=0,\qquad
+(b)\quad x^2+11x+24=0,\qquad
+(c)\quad x^2-x-12=0.
+\]
+</p>
+<p class="sol" id="e3" style="display: none">
+$(a)$ $x_1=1$, $x_2=5$;
+$\quad(b)$ $x_1=-8$, $x_2=-3$;
+$\quad(c)$ $x_1=-3$, $x_2=4$.
+</p>
+<button onclick="xou('e3')">Solució.</button>
+
+<p><b>Exercici 4.</b>
+Troba dos nombres tals que la seva suma sigui $8$ i el seu producte $-65$.
+</p>
+<p class="sol" id="e4" style="display: none">
+Resolem l'equació $x^2-sx+p=0$ amb $s=8$, $p=-65$ i trobem $x_1=-5$, $x_2=13$.
+</p>
+<button onclick="xou('e4')">Solució.</button>
+
+<p><b>Exercici 5.</b>
+Considera l'equació $3x^2+8x+k=0$ on $k$ és un paràmetre real. Troba'n les dues
+solucions i el valor de $k$ sabent que una solució és el triple de l'altra.
+</p>
+<p class="sol" id="e5" style="display: none">
+$x_1=-2$, $x_2=-\frac{2}{3}$, $k=4$.
+</p>
+<button onclick="xou('e5')">Solució.</button>
+
+
+<p>Torna a l'<a href='https://elsegonpeix.github.io/mates-mates/'>índex</a>.</p>
+
+<script>
+function xou(id){
+  var x = document.getElementById(id).style.display;
+  if (x == 'none') {
+    document.getElementById(id).style.display = 'block';
+  } else {
+    document.getElementById(id).style.display = 'none';
+  }
+}
+</script>
+
+</body>
+</html>
