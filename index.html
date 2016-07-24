@@ -75,7 +75,13 @@ escriu "y = axx + bx + c" a l'input, prem enter i crea els sliders per "a", "b",
 "c". Apareix al pla una paràbola; els punts on aquesta talla amb l'eix d'abscisses
 ($y = 0$) és on es troben les solucions de l'equació de segon grau. Mou els
 sliders i fixa't amb el que passa.
+<br>
+També és recomanable conèixer l'aplicació
+<a href='http://graph.tk' target='_blank'>graph.tk</a>. No té tantes eines com el
+geogebra, però per representar funcions de manera ràpida i visual és bastant útil.
 </p>
+
+<h3>3.2. Suma i producte de les solucions.</h3>
 
 <p><b>Exercici 2.</b>
 Demostra que si l'equació $ax^2+bx+c=0$ té com a solucions $x_1$, $x_2$, aleshores
@@ -117,7 +123,7 @@ $x_1=-7$, $x_2=2$ es compleixen les dues condicions.
 </p>
 
 <p><b>Exercici 3.</b>
-Trobar de manera directa les solucions de les equacions següents.
+Troba de manera directa les solucions de les equacions següents.
 \[
 (a)\quad x^2-6x+5=0,\qquad
 (b)\quad x^2+11x+24=0,\qquad
@@ -148,6 +154,204 @@ $x_1=-2$, $x_2=-\frac{2}{3}$, $k=4$.
 </p>
 <button onclick="xou('e5')">Solució.</button>
 
+<h3>3.3. Sistemes d'equacions de segon grau.</h3>
+
+<p>
+Considerem $y=x+1$, que es pot representar gràficament al pla de coordenades
+cartesianes com la recta de pendent $1$ que passa per l'ordenada $1$.
+<br>
+Considerem ara la circumferència unitat (la circumferència de radi $1$ centrada a
+l'origen de coordenades), que s'expressa com $x^2+y^2=1$. Podem trobar
+senzillament els punts d'intersecció d'aquesta recta i d'aquesta circumferència
+dibuixant-les en un full quadriculat, però també es poden calcular algebraicament
+resolent el sistema
+\[
+\begin{cases}
+y=x+1,\\
+x^2+y^2=1.
+\end{cases}
+\]
+En aquest cas, ho tenim preparat per aplicar el mètode de substitució. Sols cal
+resoldre l'equació $x^2+(x+1)^2=1$, que és equivalent a l'equació $x^2+x=0$, que
+té dues solucions: $x_1=-1$, $x_2=0$. Corresponen a aquestes abscisses les
+ordenades $y_1=0$, $y_2=1$, per tant, els punts d'intersecció de la recta i de la
+circumferència són $P_1=(-1,0)$ i $P_2=(0,1)$. Pots tornar a fer ús del
+<a href='https://geogebra.org/algebra' target='_blank'>geogebra</a>, aquesta
+vegada escrivint dues equacions en diferents inputs: "y=x+1" i "xx+yy=1" i fent
+servir l'eina intersect (és a la segona persiana, la del punt blau denotat per A).
+</p>
+
+<p><b>Exercici 6.</b>
+Resol els següents sistemes. Recorda els mètodes de resolució de sistemes:
+reducció, substitució, igualació; et poden ser útils.
+\[
+(a)\quad
+\begin{cases}
+x-y=2,\\
+x^2+y^2=74,
+\end{cases}
+\qquad
+(b)\quad
+\begin{cases}
+x^2-y^2=24,\\
+2x^2+y^2=51,
+\end{cases}
+\qquad
+(c)\quad
+\begin{cases}
+x+y=2,\\
+xy=-15,
+\end{cases}
+\qquad
+(d)\quad
+\begin{cases}
+x+2y=5,\\
+x^2+4xy=9.
+\end{cases}
+\]
+</p>
+<p class="sol" id="e6" style="display: none">
+$(a)$ $P_1=(-5,-7)$, $P_2=(7,5)$;
+<br>
+$(b)$ $P_1=(-5,1)$, $P_2=(-5,-1)$, $P_3=(5,1)$, $P_4=(5,-1)$;
+<br>
+$(c)$ $P_1=(-3,5)$, $P_2=(5,-3)$;
+<br>
+$(d)$ $P_1=(1,2)$, $P_2=(9,-2)$.
+</p>
+<button onclick="xou('e6')">Solució.</button>
+
+<p><b>Exercici 7.</b>
+El perímetre d'un rectangle mesura $42$ mm i la seva diagonal, $15$ mm. Troba
+l'àrea del rectangle.
+</p>
+<p class="sol" id="e7" style="display: none">
+Cal resoldre un sistema d'equacions. Si $a$ i $b$ són els costats del rectangle,
+la solució es pot trobar resolent
+\[
+\begin{cases}
+a+b=21,\\
+a^2+b^2=255.
+\end{cases}
+\]
+S'obté $a_1=9$ mm, $b_1=12$ mm o bé $a_2=12$ mm, $b_2=9$ mm. L'àrea del rectangle
+és, doncs, de $108$ mm$^2$.
+</p>
+<button onclick="xou('e7')">Solució.</button>
+
+<h3>3.4. Equacions biquadrades.</h3>
+
+<p>
+Considerem l'equació $x^4-5x^2+4=0$. És una equació de quart grau sense termes de
+grau senar. Aquest tipus d'equacions també s'anomenen biquadrades.
+<br>
+Fent un petit canvi, podem trobar la solució d'aquesta equació. Sols cal treballar
+amb una altra variable que definim com $t=x^2$. Veiem com, fent això, obtenim una
+nova equació, $t^2-5t+4=0$, que sabem resoldre: té solucions $t_1=1$, $t_2=4$.
+<br>
+Ara tornem enrere, desfem el canvi: $x=\pm\sqrt{t}$, per tant, si $t=t_1$, trobem
+dues solucions: $x_2=-1$, $x_3=1$. I si $t=t_2$, trobem dues altres solucions:
+$x_1=-2$, $x_4=2$.
+<br>
+L'equació $x^4-5x^2+4=0$ té, doncs, quatre solucions: $x_1=-2$, $x_2=-1$, $x_3=1$,
+$x_4=2$.
+</p>
+
+<p class="obs"><i>Observació 4. Nombre de solucions d'una equació biquadrada.</i>
+Pel teorema fonamental de l'àlgebra, un polinomi no nul de grau $n$ amb
+coeficients complexos té $n$ arrels complexes, per tant una equació biquadrada té
+$4$ arrels complexes. A nosaltres sols ens interessen les reals: en pot tenir com
+a mínim $0$ i com a màxim $4$.
+<br>
+L'exemple anterior és un cas en el què es tenen $4$ arrels reals, però l'equació
+$x^4-16=0$, per exemple, en té tan sols $2$, i l'equació $x^4+2x^2+1=0$ no en té
+cap! L'equació $x^4=0$ sols en té $1$: $x_1=0$, i l'equació $x^4-x^2=0$ en té $3$.
+</p>
+
+<p><b>Exercici 8.</b>
+Resol les equacions biquadrades. Indicació: no en tots els casos cal fer un canvi
+de variable.
+\[
+(a)\quad x^4-3x^2=0,\qquad
+(b)\quad x^4-3x^2-4=0,\qquad
+(c)\quad x^4+5x^2=0,\qquad
+(d)\quad 9x^4-16=0.
+\]
+</p>
+<p class="sol" id="e8" style="display: none">
+$(a)$ $x_1=-\sqrt{3}$, $x_2=0$, $x_3=\sqrt{3}$;
+$\quad(b)$ $x_1=-2$, $x_2=2$;
+$\quad(c)$ $x_1=0$;
+$\quad(d)$ $x_1=-\frac{2}{3}\sqrt{3}$, $x_2=\frac{2}{3}\sqrt{3}$.
+</p>
+<button onclick="xou('e8')">Solució.</button>
+
+<h3>3.5. Equacions irracionals.</h3>
+
+<p>
+Una equació irracional és una equació amb una incògnita sota un símbol de radical,
+per exemple, $\sqrt{x-1}+3=x$. Per resoldre-la, sols cal desfer-se de l'arrel
+quadrada, així:
+\begin{align}
+\sqrt{x-1}+3 &= x,\\
+\sqrt{x-1} &= x-3,\\
+(\sqrt{x-1})^2 &= (x-3)^2,\\
+x-1 &= x^2-6x+9,\\
+x^2-7x+10 &= 0.
+\end{align}
+Elevar al quadrat cada membre de la igualtat és un procediment una mica perillós,
+ja que pot fer aparèixer solucions fictícies. En aquest exemple, tenim que les
+solucions de l'equació de segon grau del final són $x_1=2$, $x_2=5$, però com es
+pot comprovar amb facilitat, sols $x_2$ compleix l'equació irracional del
+principi: $x_1$ és, doncs, una solució fictícia.
+</p>
+
+<p><b>Exercici 9.</b>
+Resol les equacions irracionals. Recorda que $(\sqrt{a}+\sqrt{b})^2=a+2\sqrt{ab}+
+b$.
+\[
+(a)\quad 1+\sqrt{25-x^2}=x,\qquad
+(b)\quad \sqrt{2x+6}-\sqrt{x+4}=1,\qquad
+(c)\quad \sqrt{8+2x}+\sqrt{2x-1}=7.
+\]
+</p>
+<p class="sol" id="e9" style="display: none">
+$(a)$ $x_1=4$;
+$\quad(b)$ $x_1=5$;
+$\quad(c)$ $x_1=\frac{449}{98}$.
+</p>
+<button onclick="xou('e9')">Solució.</button>
+
+<h3>3.5. Altres tipus d'equacions.</h3>
+
+<p>
+Hi ha equacions que no són ni de primer ni de segon grau, ni biquadrades, ni
+irracionals, però tot i així es poden resoldre fàcilment.
+<br>
+Per exemple, considerem $x^3+8=0$. Podem veure com, en efecte, l'única solució
+real és $x_1=-2$.
+<br>
+Considerem ara l'equació $(x+1)(x^2-3x+2)=0$. Veiem que es compleix si i només si
+$x+1=0$ o bé si $x^2-3x+2=0$. Trobem, doncs, tres arrels: $x_1=-1$, $x_2=1$,
+$x_3=2$. Si haguéssim desenvolupat l'expressió inicial, hauríem obtingut
+$x^3-2x^2-x+2=0$, però no sabem trobar les solucions d'aquesta equació (de
+moment).
+</p>
+
+<p><b>Exercici 10.</b>
+Resol les equacions.
+\[
+(a)\quad (x+5)(1-8x^3)(3x-1)=0,\qquad
+(b)\quad 2x^5-12x^4+18x^3=0,\qquad
+(c)\quad (x+1)^4=16.
+\]
+</p>
+<p class="sol" id="e10" style="display: none">
+$(a)$ $x_1=-5$, $x_2=1/3$, $x_3=1/2$;
+$\quad(b)$ $x_1=0$, $x_2=3;
+$\quad(c)$ $x_1=-3$, $x_2=1$.
+</p>
+<button onclick="xou('e10')">Solució.</button>
 
 <p>Torna a l'<a href='https://elsegonpeix.github.io/mates-mates/'>índex</a>.</p>
 
